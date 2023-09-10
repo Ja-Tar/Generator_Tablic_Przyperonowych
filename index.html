@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Generator Tablic Przy Peronowych</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Generowanie Strony</h1>
+        <p>Wprowadź dane:</p>
+        Godzina odjazdu: <input type="time" id="godz" value="20:20"><br>
+        Numer pociągu: <input type="number" id="numer_pociagu" min="1000" max="999999" value="6666"><br>
+        Stacja końcowa: <input type="text" id="stacja_koncowa" placeholder="Ciekawa stacja ;]"><br>
+        Stację pośrednie (oddzielone przecinkiem): <input type="text" id="stacje_posrednie" placeholder="To będzie długie XD"><br>
+        Przewoźnik: <input type="text" id="przewoznik" placeholder="PKP - Poczekaj Kiedyś Przyjedzie" style="width: 210px;"><br>
+        <button onclick="generujStrone()">Generuj</button>
+        <div id="wygenerowanaStrona"></div>
+        <script src="main.js" async defer></script>
+    </body>
+</html>
