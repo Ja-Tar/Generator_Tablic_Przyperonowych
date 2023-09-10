@@ -6,15 +6,10 @@ function generujStrone() {
     var stacje_posrednie = document.getElementById('stacje_posrednie').value;
     var przewoznik = document.getElementById('przewoznik').value;
 
-    // Pobierz treść szablonu z pliku template.html za pomocą AJAX
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'ekran_tamplate.html', true);
-
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Treść szablonu
-            var template = xhr.responseText;
-
+    // Pobierz treść szablonu z pliku ekran_tamplate.html za pomocą fetch
+    fetch('ekran_template.html')
+        .then(response => response.text())
+        .then(template => {
             // Sprawdzamy czy wszystkie pola są wypełnione
             if (godz === '' || numer_pociagu === '' || stacja_koncowa === '' || stacje_posrednie === '' || przewoznik === '') {
                 alert('Proszę wypełnić wszystkie pola!');
@@ -27,8 +22,8 @@ function generujStrone() {
             // Wstaw wypełniony szablon do dokumentu
             var miejsceNaStrone = document.getElementById('wygenerowanaStrona');
             miejsceNaStrone.innerHTML = wypelnionySzablon;
-        }
-    };
-
-    xhr.send();
+        })
+        .catch(error => {
+            console.error('Błąd pobierania szablonu:', error);
+        });
 }
