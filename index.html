@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Generator Tablic Przy Peronowych</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>Generowanie Strony</h1>
-        <p>Wprowadź dane:</p>
-        <form>
-        Godzina odjazdu: <input type="time" id="godz" value="20:20"><br>
-        Numer pociągu: <input type="number" id="numer_pociagu" min="1000" max="999999" value="6666"><br>
-        Stacja końcowa: <input type="text" id="stacja_koncowa" placeholder="Ciekawa stacja ;]"><br>
-        Stację pośrednie (oddzielone przecinkiem): <input type="text" id="stacje_posrednie" placeholder="To będzie długie XD"><br>
-        Przewoźnik: <input type="text" id="przewoznik" placeholder="PKP - Poczekaj Kiedyś Przyjedzie" style="width: 210px;"><br>
-        </form>
-        <button onclick="generujStrone()">Generuj</button>
-        <p><h1>Wynik:</h1></p>
-        <div id="wygenerowanaStrona"></div>
-        <script src="main.js" async defer></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Generator Tablic Przy Peronowych</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index_style.css">
+    <script type="module" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+</head>
+
+<body>
+    <h1>Generator Tablic Przy Peronowych</h1>
+    <h2>Wprowadź dane: </h2>
+    <form>
+        <div id="main">
+            <div id="info1" class="header">
+                <div id="centerd">
+                    <div id="czasb" class="tekst"><input type="time" id="godz"></div>
+                    <div id="boxtekstwzor" class="animacja-migmig">
+                        <div>&numsp;WPISZ&numsp;</div>
+                        <div>&numsp;DANE&numsp;</div>
+                    </div>
+                </div>
+                <div class="textnisko">Numer / Number:</div>
+                <div class="textniskoo"><input type="text" id="numer_pociagu" placeholder="EIE 6666"></div>
+            </div>
+            <div id="info2" class="header">
+                <div id="stacjab" class="tekst"><input type="text" id="stacja_koncowa" placeholder="Ciekawa stacja ;]">
+                </div>
+                <div class="infotext">Stacje pośrednie / Via stations:</div>
+                <div id="stacjelista"><textarea id="stacje_posrednie" name="stacje_posrednie" rows="6" placeholder="To będzie długie XD" class="stacjelista" style="width: 642px"></textarea></div>
+                <div class="textnisko" style="margin-left: 0px;">Przewoźnik / Oparator:</div>
+                <div class="textniskoo" style="margin-left: 0px;"><input type="text" id="przewoznik" placeholder="PKP - Poczekaj Kiedyś Przyjedzie" style="width: 210px;"></div>
+            </div>
+            <script src="" async defer></script>
+        </div>
+    </form><br>
+    <button onclick="generujStrone()" class="btn md color-5">Generuj</button>
+    <h1>Wynik:</h1>
+    <div id="wygenerowanaStrona"></div>
+    <h1>Zdjęcie:</h1>
+    <div id="wygenerowaneZdjecie"></div>
+    <script src="main.js" async defer></script>
+</body>
+
 </html>

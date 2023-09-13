@@ -22,6 +22,12 @@ function generujStrone() {
             // Wstaw wypełniony szablon do dokumentu
             var miejsceNaStrone = document.getElementById('wygenerowanaStrona');
             miejsceNaStrone.innerHTML = wypelnionySzablon;
+            var miejsceNaZdjecie = document.getElementById('wygenerowaneZdjecie');
+            html2canvas(document.getElementById('wygenerowanaStrona')).then(function(canvas) {
+                miejsceNaZdjecie.append(canvas);
+            });
+            var classa = document.getElementById('boxtekst');
+            classa.classList.add("animacja-migmig")
         })
         .catch(error => {
             console.error('Błąd pobierania szablonu:', error);
