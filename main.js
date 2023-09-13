@@ -24,6 +24,7 @@ function generujStrone() {
             miejsceNaStrone.innerHTML = wypelnionySzablon;
             var miejsceNaZdjecie = document.getElementById('wygenerowaneZdjecie');
             html2canvas(document.getElementById('wygenerowanaStrona'), {width: 900}).then(function(canvas) {
+                miejsceNaZdjecie.innerHTML = ""
                 var img = new Image();
                 img.src = canvas.toDataURL("image/png");
                 miejsceNaZdjecie.append(img);
