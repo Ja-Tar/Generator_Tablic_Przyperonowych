@@ -27,6 +27,8 @@ function generujStrone() {
                 miejsceNaZdjecie.innerHTML = "";
                 var img = new Image();
                 img.src = canvas.toDataURL("image/png");
+                img.width = 900;
+                img.height = 440;
                 miejsceNaZdjecie.append(img);
             });
             var classa = document.getElementById('boxtekst');
