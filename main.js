@@ -23,8 +23,10 @@ function generujStrone() {
             var miejsceNaStrone = document.getElementById('wygenerowanaStrona');
             miejsceNaStrone.innerHTML = wypelnionySzablon;
             var miejsceNaZdjecie = document.getElementById('wygenerowaneZdjecie');
-            html2canvas(document.getElementById('wygenerowanaStrona')).then(function(canvas) {
-                miejsceNaZdjecie.append(canvas);
+            html2canvas(document.getElementById('wygenerowanaStrona'), {width: 900}).then(function(canvas) {
+                var img = new Image();
+                img.src = canvas.toDataURL("image/png");
+                miejsceNaZdjecie.append(img);
             });
             var classa = document.getElementById('boxtekst');
             classa.classList.add("animacja-migmig")
