@@ -90,3 +90,13 @@
       opacity: 0.0;
     }
 }
+
+#info2 .inline {
+    display: inline-block; /* or use flex properties for more control */
+    vertical-align: top; /* to align them vertically at the top */
+}
+
+#info2 .move-right {
+    float: right; /* Move the element to the right */
+    margin-right: 10px; /* Add some margin for spacing */
+}

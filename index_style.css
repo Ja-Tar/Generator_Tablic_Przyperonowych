@@ -1,9 +1,11 @@
+body {
+    font-family: arial, sans-serif;
+    color: white;
+    background-color: #333; /* Dodane ciemne tło */
+}
+
 #main {
     display: flex;
-    font-family: arial, sans-serif;
-    width: 900px;
-    height: 440px;
-    color: white;
 }
 
 .tekst {
@@ -29,13 +31,19 @@
 }
 
 .textnisko {
-    margin-left: 10px;
     position: absolute;
     bottom: 15%;
     font-style: italic;
     font-weight: normal;
     font-size: large;
     margin-top: 7px;
+    margin-left: 0px;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top; /* Align the elements at the top */
+    margin-right: 260px; /* Add margin between the elements if needed */
 }
 
 .textniskoo {
@@ -46,6 +54,24 @@
     margin-top: 7px;
     font-weight: bold;
     font-size: 200%;
+    margin-left: 10px;
+}
+
+/* Stylowanie input[type="time"], input[type="text"], textarea */
+input[type="time"], input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Stylowanie placeholderów */
+input[type="text"]::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .stacjelista {
@@ -109,12 +135,25 @@
 }
 
 #stacja_koncowa {
-    width: 640px;
+    width: 96%;
     height: 66px;
     font-size: 50%;
 }
 
-/* TEST */
+#wygenerowanaStrona:not(:empty) {
+    width: 900px;
+    height: 440px;
+}
+
+#mainform {
+    display: flex;
+    font-family: arial, sans-serif;
+    color: white;
+    width: 900px;
+    height: 440px;
+}
+
+/* Button */
 
 .btn {
     display: inline-block;

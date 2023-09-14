@@ -15,7 +15,7 @@
     <h1>Generator Tablic Przy Peronowych</h1>
     <h2>Wprowadź dane: </h2>
     <form>
-        <div id="main">
+        <div id="mainform">
             <div id="info1" class="header">
                 <div id="centerd">
                     <div id="czasb" class="tekst"><input type="time" id="godz"></div>
@@ -24,24 +24,35 @@
                         <div>&numsp;DANE&numsp;</div>
                     </div>
                 </div>
-                <div class="textnisko">Numer / Number:</div>
-                <div class="textniskoo"><input type="text" id="numer_pociagu" placeholder="EIE 6666"></div>
+                <div class="textnisko input">Numer / Number:</div>
+                <div class="textniskoo"><input type="text" id="numer_pociagu" placeholder="EIE 6666"
+                        style="width: 80%;"></div>
             </div>
             <div id="info2" class="header">
                 <div id="stacjab" class="tekst"><input type="text" id="stacja_koncowa" placeholder="Ciekawa stacja ;]">
                 </div>
                 <div class="infotext">Stacje pośrednie / Via stations:</div>
-                <div id="stacjelista"><textarea id="stacje_posrednie" name="stacje_posrednie" rows="6" placeholder="To będzie długie XD" class="stacjelista" style="width: 642px"></textarea></div>
-                <div class="textnisko" style="margin-left: 0px;">Przewoźnik / Oparator:</div>
-                <div class="textniskoo" style="margin-left: 0px;"><input type="text" id="przewoznik" placeholder="PKP - Poczekaj Kiedyś Przyjedzie" style="width: 210px;"></div>
+                <div id="stacjelista"><textarea id="stacje_posrednie" name="stacje_posrednie" rows="6"
+                        placeholder="To będzie długie XD" class="stacjelista"
+                        style="width: 96%; resize: none;"></textarea></div>
+                <div class="inline">
+                    <div class="textnisko input" id="nazwapociagutext">Nazwa / Name:</div>
+                    <div class="textniskoo"><input type="text" id="nazwapociagu" placeholder="Krychowiak"
+                            style="width: 210px;"></div>
+                </div>
+                <div class="inline">
+                    <div class="textnisko input" id="przewozniktext">Przewoźnik / Oparator:</div>
+                    <div class="textniskoo"><input type="text" id="przewoznik"
+                            placeholder="PKP - Poczekaj Kiedyś Przyjedzie" style="width: 210px;"></div>
+                </div>
             </div>
             <script src="" async defer></script>
         </div>
     </form><br>
     <button onclick="generujStrone()" class="btn md color-5">Generuj</button>
-    <h1>Wynik:</h1>
+    <h1 class="hidenocontent">Wynik:</h1>
     <div id="wygenerowanaStrona"></div>
-    <h1>Zdjęcie:</h1>
+    <h1 class="hidenocontent">Zdjęcie:</h1>
     <div id="wygenerowaneZdjecie"></div>
     <script src="main.js" async defer></script>
 </body>
