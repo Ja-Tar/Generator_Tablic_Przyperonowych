@@ -100,3 +100,27 @@
     float: right; /* Move the element to the right */
     margin-right: 10px; /* Add some margin for spacing */
 }
+
+@keyframes przewijanie {
+    0% {
+        transform: translateX(calc(100% - 50px)); /* Przesunięcie na prawo poza kontener */
+    }
+    100% {
+        transform: translateX(-100%); /* Przesunięcie na lewo w obrębie kontenera */
+    }
+}
+
+#przewijak {
+    width: 100%; /* Dostosuj szerokość według potrzeb */
+    height: 100px; /* Dostosuj wysokość według potrzeb */
+    overflow: hidden; /* Ukryj tekst poza kontenerem */
+    position: relative; /* Ustalamy pozycję jako relatywną, aby móc pozycjonować tekst wewnątrz */
+}
+
+#przewijak #stacjab {
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    overflow: hidden; /* Ukryj tekst poza kontenerem */
+    position: absolute; /* Pozycjonowanie absolutne wewnątrz kontenera */
+    animation: none; /* Wyłącz animację na początek */
+}
+
